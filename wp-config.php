@@ -40,6 +40,8 @@ if (!function_exists('getenv_docker')) {
 }
 
 // ** Database settings - You can get this info from your web host ** //
+/** Make WordPress install plugins directly **/
+define('FS_METHOD', 'direct');
 /** The name of the database for WordPress */
 define( 'DB_NAME', getenv_docker('WORDPRESS_DB_NAME', 'wordpress') );
 
